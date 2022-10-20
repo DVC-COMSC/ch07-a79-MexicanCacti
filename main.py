@@ -16,3 +16,25 @@ print()
 # ******************************
 # Make your Code
 # ******************************
+rmax = 0
+maxnum = 0
+checked = False
+print('Sum of columns: ', end = ' ')
+for i in range(cnum):
+    csum = 0
+    for j in range(rnum):
+        csum += numbers[j][i]
+        if maxnum < numbers[j][i]:
+            maxnum = numbers[j][i]
+        if not checked:
+            rsum = sum(numbers[i])
+            if rmax < rsum:
+                rmax = rsum
+                maxr = j
+        checked = True
+
+    print (csum, end = ' ')
+print()
+
+print(f"The row that has the greatest sum: {maxr}")
+print(f"The greatest number: {maxnum}")
