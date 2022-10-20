@@ -27,11 +27,11 @@ for i in range(cnum):
         if maxnum < numbers[j][i]:
             maxnum = numbers[j][i]
         if not checked:
-            rsum = sum(numbers[i])
+            rsum = sum(numbers[j])
             if rmax < rsum:
                 rmax = rsum
                 maxr = j
-        checked = True
+    checked = True
 
     print (csum, end = ' ')
 print()
